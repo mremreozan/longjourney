@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <title>Energy Consumption</title>
+</head>
+<body>
+    <img id="container" class="m-auto text-center text-dark fw-bold m-auto rounded">
+        <img id="logo" src="static/image/immoelisa.png" width="500" hwight="200" alt="logo"></img>
+        <h2 style="text-align: center; color: yellow;">Features of the Building&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+        <br>
+        <div id="formulaire">
+            <form action="{{ url_for('index') }}" method = "post">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="">Relative Compactness</span>
+                </div>
+                <input type="text" name="relative_compactness" class="form-control" value="0.98">
+                ---
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="">Surface Area</span>
+                </div>
+                <input type="text" name="surface_area" class="form-control" value="514.5">
+                <span class="input-group-text">m²</span> 
+              </div>
+                <br>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Wall Area</span>
+                  </div>
+                  <input type="text" name="wall_area" class="form-control" value="294.0">
+                  <span class="input-group-text">m²</span> 
+                  ---
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Roof Area</span>
+                  </div>
+                  <input type="text" name="roof_area" class="form-control" value="110.25">
+                  <span class="input-group-text">m²</span> 
+                </div>
+                <br>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Overall Height</span>
+                  </div>
+                  <input type="text" name="overall_height" class="form-control" value="7.0">
+                  <span class="input-group-text">m</span> 
+                  ---
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Orientation</span>
+                  </div>
+                  <input type="text" name="orientation" class="form-control" value="3.0">
+                </div>
+                <br>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Glazing Area</span>
+                  </div>
+                  <input type="text" name="glazing_area" class="form-control" value="0.0">
+                  <span class="input-group-text">m²</span> 
+                  ---
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Glazing Area Distribution</span>
+                  </div>
+                  <input type="text" name="glazing_area_dist" class="form-control" value="0.0">
+                  <span class="input-group-text">m²</span> 
+                </div>
+                <br>
+                <div style="text-align: center;">
+                <input  type="submit" class="btn btn-primary" name="predict" value="Predict Energy Consumption">
+                </div>
+                <br>
+                <br>
+            </form>
+        </div>
+
+    </div>
+</body>
+</html>

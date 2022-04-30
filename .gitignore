@@ -1,0 +1,9 @@
+datasets
+.env
+*.xml
+*.xlsx
+*.ipynb
+venv
+.DS_Store
+__pycache__/
+model-almanac-291915-5821b27fb095.json
