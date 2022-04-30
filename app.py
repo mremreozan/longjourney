@@ -11,9 +11,9 @@ model_cooing = "COOLING_MODEL_GCP"
 model_heating = "EMRE_HEATING_MODEL_GCP"
 
 
-app.route("/index")
-def hello():
-    return "Welcome to Energy Consumption Application!!"
+# app.route("/index")
+# def hello():
+#     return "Welcome to Energy Consumption Application!!"
 
 @app.route('/index', methods=['GET', 'POST'])
 def index():
