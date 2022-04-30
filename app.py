@@ -1,8 +1,5 @@
-from flask import jsonify
 from flask import Flask, render_template, request, redirect, url_for
-import requests
-import json
-import os
+# import os
 from utils.prediction import predict_json
 
 
@@ -39,10 +36,6 @@ def index():
                                 cooling_load=round(cooling_load[0]["predicted_Y2"][0], 1))
     else:
         return render_template('index.html')
-
-@app.errorhandler(404)
-def page_not_found(e):
-    return redirect(url_for('index'))
 
 
 if __name__ == '__main__':
